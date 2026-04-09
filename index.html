@@ -293,8 +293,11 @@
       .slide-logo { height: 13px !important; top: 18px !important; left: 20px !important; }
       .nav-controls { bottom: 16px !important; }
       .nav-btn { width: 36px !important; height: 36px !important; font-size: 14px !important; }
-      .col-c { align-items: flex-start !important; text-align: left !important; }
-      .slide.bg-cover .col-c { align-items: center !important; text-align: center !important; }
+      /* col-c stays centered except on content slides */
+      .slide.bg-surface .col-c,
+      .slide.bg-white .col-c { align-items: flex-start !important; text-align: left !important; }
+      .slide.bg-cover .col-c,
+      .slide.bg-white:last-of-type .col-c { align-items: center !important; text-align: center !important; }
     }
   </style>
 </head>
